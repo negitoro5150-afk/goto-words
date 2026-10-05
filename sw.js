@@ -1,4 +1,4 @@
-const CACHE = 'goto-words-v2';
+const CACHE = 'goto-words-v2.1';
 const ASSETS = ['./', './index.html', './words.json', './manifest.webmanifest', './icon-192.png', './icon-512.png'];
 self.addEventListener('install', event => event.waitUntil(
   caches.open(CACHE).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting())

@@ -33,7 +33,7 @@ header{display:flex;align-items:end;justify-content:space-between;margin-bottom:
 
 <section id="study" class="panel active">
 <div class="toolbar">
-<button class="pill active" data-filter="all">すべて</button><button class="pill" data-filter="hard">苦手だけ</button>
+<button class="pill active" data-filter="all">すべて</button><button class="pill" data-filter="recent">最近追加20語</button><button class="pill" data-filter="hard">苦手だけ</button>
 <button class="pill" id="direction">英 → 日</button><button class="pill" id="shuffle">シャッフル</button>
 </div>
 <div class="progress"><div id="bar"></div></div>
@@ -45,7 +45,7 @@ header{display:flex;align-items:end;justify-content:space-between;margin-bottom:
 <div class="stats"><div class="stat"><div class="num" id="knownN">0</div><div class="small">覚えた</div></div><div class="stat"><div class="num" id="hardN">0</div><div class="small">苦手</div></div><div class="stat"><div class="num" id="reviewN">0</div><div class="small">回答回数</div></div></div>
 </section>
 
-<section id="words" class="panel"><input class="search" id="search" placeholder="単語を検索"><div class="list" id="wordList"></div></section>
+<section id="words" class="panel"><div class="toolbar"><button class="pill active" data-list-filter="all">すべて</button><button class="pill" data-list-filter="recent">最近追加20語</button></div><input class="search" id="search" placeholder="単語を検索"><div class="list" id="wordList"></div></section>
 
 <section id="add" class="panel">
 <div class="form"><h3>新しい単語</h3><input id="newFront" placeholder="English"><textarea id="newBack" rows="3" placeholder="日本語の意味・メモ"></textarea>
@@ -98,27 +98,32 @@ async function syncWords(){
  }finally{syncing=false;}
 }
 window.addEventListener('online',syncWords);
-let filter='all', index=0, queue=[];
+let filter='all', listFilter='all', index=0, queue=[];
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 function save(){try{localStorage.setItem(KEY,JSON.stringify(db));}catch{toast('端末への保存ができません。バックアップを書き出してください');} renderStats(); renderList();}
 function st(w){const key=wordKey(w.front);return db.statsByFront[key]||(db.statsByFront[key]={known:0,hard:0,reviews:0,last:null});}
-function rebuild(shuffle=false){queue=db.words.filter(w=>filter==='all'||st(w).hard>st(w).known); if(shuffle) queue.sort(()=>Math.random()-.5); index=Math.min(index,Math.max(0,queue.length-1)); render();}
+function recentWords(){return [...db.words].sort((a,b)=>{
+ const dateA=Date.parse(a.created_at||a.created)||0,dateB=Date.parse(b.created_at||b.created)||0;
+ return dateB-dateA||(Number(b.id)||0)-(Number(a.id)||0);
+}).slice(0,20);}
+function rebuild(shuffle=false){queue=filter==='recent'?recentWords():db.words.filter(w=>filter==='all'||st(w).hard>st(w).known); if(shuffle) queue.sort(()=>Math.random()-.5); index=Math.min(index,Math.max(0,queue.length-1)); render();}
 function render(){let w=queue[index]; $('#card').classList.remove('flip'); if(!w){$('#frontText').textContent='苦手単語なし';$('#backText').textContent='すべて順調です';$('#bar').style.width='100%';return}
 let rev=db.direction==='ja-en'; $('#frontText').textContent=rev?w.back.split('｜')[0]:w.front; $('#backText').textContent=rev?w.front:w.back;
 $('#frontLabel').textContent=rev?'JAPANESE':'ENGLISH';$('#backLabel').textContent=rev?'ENGLISH':'JAPANESE';
 $('#bar').style.width=((index+1)/queue.length*100)+'%';$('#headerCount').textContent=`${index+1} / ${queue.length}`;}
 function renderStats(){let vals=Object.values(db.statsByFront);$('#knownN').textContent=vals.filter(x=>x.known>x.hard).length;$('#hardN').textContent=vals.filter(x=>x.hard>x.known).length;$('#reviewN').textContent=vals.reduce((a,x)=>a+x.reviews,0)}
-function renderList(){let q=($('#search')?.value||'').toLowerCase(); let a=db.words.filter(w=>(w.front+' '+w.back).toLowerCase().includes(q));$('#wordList').innerHTML=a.map(w=>{let s=st(w);return `<div class="row"><div><b>${esc(w.front)}</b><span>${esc(w.back)}</span></div>${s.hard>s.known?'<div class="badge">苦手</div>':''}</div>`}).join('')}
+function renderList(){let q=($('#search')?.value||'').toLowerCase(); let a=(listFilter==='recent'?recentWords():db.words).filter(w=>(w.front+' '+w.back).toLowerCase().includes(q));$('#wordList').innerHTML=a.map(w=>{let s=st(w);return `<div class="row"><div><b>${esc(w.front)}</b><span>${esc(w.back)}</span></div>${s.hard>s.known?'<div class="badge">苦手</div>':''}</div>`}).join('')}
 function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
 function rate(kind){let w=queue[index];if(!w)return;let s=st(w);s[kind]++;s.reviews++;s.last=Date.now();save();toast(kind==='known'?'覚えた ✓':'苦手に追加'); if(index<queue.length-1)index++; else index=0;rebuild();}
 function toast(t){$('#toast').textContent=t;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),900)}
 $('#card').onclick=()=>$('#card').classList.toggle('flip');$('#knownBtn').onclick=()=>rate('known');$('#hardBtn').onclick=()=>rate('hard');
 $$('.pill[data-filter]').forEach(b=>b.onclick=()=>{$$('.pill[data-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');filter=b.dataset.filter;index=0;rebuild()});
+$$('.pill[data-list-filter]').forEach(b=>b.onclick=()=>{$$('.pill[data-list-filter]').forEach(x=>x.classList.remove('active'));b.classList.add('active');listFilter=b.dataset.listFilter;renderList()});
 $('#direction').onclick=()=>{db.direction=db.direction==='en-ja'?'ja-en':'en-ja';$('#direction').textContent=db.direction==='en-ja'?'英 → 日':'日 → 英';save();render()};
 $('#shuffle').onclick=()=>{index=0;rebuild(true);toast('シャッフルしました')};
 $$('.tab').forEach(b=>b.onclick=()=>{$$('.tab').forEach(x=>x.classList.remove('active'));$$('.panel').forEach(x=>x.classList.remove('active'));b.classList.add('active');$('#'+b.dataset.tab).classList.add('active');renderList()});
 $('#search').oninput=renderList;
-$('#addBtn').onclick=()=>{let f=$('#newFront').value.trim(),b=$('#newBack').value.trim();if(!f||!b)return toast('英語と意味を入力してください');let id=Math.max(0,...db.words.map(x=>Number(x.id)||0))+1;db.words.unshift({id,front:f,back:b,source:'manual',created:new Date().toISOString().slice(0,10)});$('#newFront').value='';$('#newBack').value='';save();rebuild();toast('追加しました')};
+$('#addBtn').onclick=()=>{let f=$('#newFront').value.trim(),b=$('#newBack').value.trim();if(!f||!b)return toast('英語と意味を入力してください');let id=Math.max(0,...db.words.map(x=>Number(x.id)||0))+1;db.words.unshift({id,front:f,back:b,source:'manual',created:new Date().toISOString()});$('#newFront').value='';$('#newBack').value='';save();rebuild();toast('追加しました')};
 $('#exportBtn').onclick=()=>{let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='goto-words-backup.json';a.click();URL.revokeObjectURL(a.href)};
 $('#importFile').onchange=e=>{let r=new FileReader();r.onload=()=>{try{db=prepareDb(JSON.parse(r.result));save();rebuild();$('#direction').textContent=db.direction==='en-ja'?'英 → 日':'日 → 英';toast('読み込みました')}catch{toast('ファイルを確認してください')}};r.readAsText(e.target.files[0])};
 let sx=0;$('#card').addEventListener('touchstart',e=>sx=e.touches[0].clientX,{passive:true});$('#card').addEventListener('touchend',e=>{let dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>60){index=(index+(dx<0?1:-1)+queue.length)%queue.length;render()}},{passive:true});
