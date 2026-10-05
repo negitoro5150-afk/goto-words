@@ -1,0 +1,646 @@
+[
+  {
+    "id": 1,
+    "front": "refrain",
+    "back": "控える｜refrain from ～ = ～を控える",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 2,
+    "front": "restrict",
+    "back": "制限する、抑える",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 3,
+    "front": "avoid",
+    "back": "避ける",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 4,
+    "front": "autonomy",
+    "back": "自主性、自律性",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 5,
+    "front": "accordance",
+    "back": "一致、調和｜in accordance with ～ = ～に従って",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 6,
+    "front": "faith",
+    "back": "信仰、信頼",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 7,
+    "front": "faithful",
+    "back": "忠実な、誠実な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 8,
+    "front": "loyal",
+    "back": "忠実な、誠実な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 9,
+    "front": "loyalty",
+    "back": "忠誠心",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 10,
+    "front": "pursuit",
+    "back": "追求【名詞】",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 11,
+    "front": "pursue",
+    "back": "追求する、追い求める【動詞】",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 12,
+    "front": "attain",
+    "back": "達成する、手に入れる",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 13,
+    "front": "desire",
+    "back": "欲望、願望",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 14,
+    "front": "seek",
+    "back": "求める、探し求める",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 15,
+    "front": "involve",
+    "back": "含む、関係する、伴う",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 16,
+    "front": "instruct",
+    "back": "指示する、教える",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 17,
+    "front": "instruction",
+    "back": "指示、説明",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 18,
+    "front": "authority",
+    "back": "権力、権限",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 19,
+    "front": "wealth",
+    "back": "富、財産",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 20,
+    "front": "ordinary",
+    "back": "普通の、平凡な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 21,
+    "front": "genuinely",
+    "back": "本当に、心から",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 22,
+    "front": "worldly",
+    "back": "世俗的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 23,
+    "front": "passion",
+    "back": "情熱、強い感情",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 24,
+    "front": "representative",
+    "back": "代表者、代表的な人",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 25,
+    "front": "religious",
+    "back": "宗教の、宗教的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 26,
+    "front": "belief",
+    "back": "信念、考え、信仰",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 27,
+    "front": "purpose",
+    "back": "目的",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 28,
+    "front": "command",
+    "back": "命令／命令する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 29,
+    "front": "obey",
+    "back": "従う",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 30,
+    "front": "pretend",
+    "back": "～のふりをする",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 31,
+    "front": "apology",
+    "back": "謝罪",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 32,
+    "front": "educate",
+    "back": "教育する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 33,
+    "front": "quantity",
+    "back": "量",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 34,
+    "front": "consist",
+    "back": "～から成る｜consist of ～",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 35,
+    "front": "attitude",
+    "back": "態度、姿勢",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 36,
+    "front": "oriented",
+    "back": "～志向の、～向けの",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 37,
+    "front": "wield",
+    "back": "振るう、行使する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 38,
+    "front": "political",
+    "back": "政治の、政治的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 39,
+    "front": "economic",
+    "back": "経済の、経済的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 40,
+    "front": "contract",
+    "back": "契約／契約する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 41,
+    "front": "endurance",
+    "back": "持久力、忍耐力",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 42,
+    "front": "temporary",
+    "back": "一時的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 43,
+    "front": "permanent",
+    "back": "永続的な、永久的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 44,
+    "front": "recognize",
+    "back": "認識する、見分ける、気づく",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 45,
+    "front": "fortunately",
+    "back": "幸いなことに",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 46,
+    "front": "fermented",
+    "back": "発酵した",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 47,
+    "front": "evaporate",
+    "back": "蒸発する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 48,
+    "front": "forecast",
+    "back": "予報、予測",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 49,
+    "front": "lively",
+    "back": "生き生きとした、快活な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 50,
+    "front": "stunning",
+    "back": "息を呑むほど美しい、とても素晴らしい",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 51,
+    "front": "fascinate",
+    "back": "魅了する、強く興味を引く",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 52,
+    "front": "tease",
+    "back": "からかう",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 53,
+    "front": "modify",
+    "back": "修正する、変更する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 54,
+    "front": "participle",
+    "back": "分詞",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 55,
+    "front": "participial",
+    "back": "分詞の、分詞に関する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 56,
+    "front": "remain",
+    "back": "残る、～のままでいる｜remind と混同注意",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 57,
+    "front": "remind",
+    "back": "思い出させる｜remain と混同注意",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 58,
+    "front": "affect",
+    "back": "影響する【動詞】",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 59,
+    "front": "effect",
+    "back": "影響、効果【名詞】",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 60,
+    "front": "specific",
+    "back": "特定の、具体的な",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 61,
+    "front": "assignment",
+    "back": "課題、宿題",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 62,
+    "front": "participate",
+    "back": "参加する｜participate in ～",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 63,
+    "front": "expression",
+    "back": "表現、表情",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 64,
+    "front": "consideration",
+    "back": "考慮、配慮",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 65,
+    "front": "satisfy",
+    "back": "～を満足させる",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 66,
+    "front": "endless",
+    "back": "終わりのない",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 67,
+    "front": "whole",
+    "back": "全体の、全部の",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 68,
+    "front": "refer",
+    "back": "言及する、参照する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 69,
+    "front": "no longer",
+    "back": "もはや～ではない",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 70,
+    "front": "pour",
+    "back": "注ぐ",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 71,
+    "front": "absent",
+    "back": "欠席している、不在の",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 72,
+    "front": "recap",
+    "back": "要約、振り返り／要点を振り返る",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 73,
+    "front": "describe",
+    "back": "説明する、描写する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 74,
+    "front": "contented",
+    "back": "満足している、満ち足りた",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 75,
+    "front": "promoted",
+    "back": "昇進した、宣伝された",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 76,
+    "front": "struggle",
+    "back": "苦労する、もがく、奮闘する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 77,
+    "front": "coincidence",
+    "back": "偶然、偶然の一致",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 78,
+    "front": "unplanned",
+    "back": "計画されていない、予定外の",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 79,
+    "front": "limitation",
+    "back": "制限、限界",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 80,
+    "front": "apply",
+    "back": "申し込む、応募する／適用する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 81,
+    "front": "paragraph",
+    "back": "段落",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 82,
+    "front": "decision",
+    "back": "決断、決定",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 83,
+    "front": "regret",
+    "back": "後悔／後悔する",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 84,
+    "front": "vocational school",
+    "back": "専門学校",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 85,
+    "front": "public university",
+    "back": "公立大学",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 86,
+    "front": "private university",
+    "back": "私立大学",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 87,
+    "front": "early bird",
+    "back": "早起きの人",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 88,
+    "front": "intermittent",
+    "back": "断続的な、途切れ途切れの",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 89,
+    "front": "used to + 動詞",
+    "back": "以前は～していた",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 90,
+    "front": "take part in ～",
+    "back": "～に参加する｜a は入れない",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 91,
+    "front": "turn one's back on ～",
+    "back": "～に背を向ける、～を見捨てる",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  },
+  {
+    "id": 92,
+    "front": "worthwhile",
+    "back": "価値のある、やる価値がある",
+    "source": "ChatGPT学習",
+    "created": "2026-10-05"
+  }
+]
